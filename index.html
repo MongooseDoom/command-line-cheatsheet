@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Command Line Cheatsheet by MongooseDoom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Command Line Cheatsheet</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/MongooseDoom/command-line-cheatsheet" class="btn">View on GitHub</a>
+      <a href="https://github.com/MongooseDoom/command-line-cheatsheet/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/MongooseDoom/command-line-cheatsheet/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="mac" class="anchor" href="#mac" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mac</h1>
+
+<h2>
+<a id="basics" class="anchor" href="#basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basics</h2>
+
+<table>
+    <tr>
+        <td>cd</td>
+        <td>change directory</td>
+    </tr>
+    <tr>
+        <td>ls</td>
+        <td>list files in directory</td>
+    </tr>
+    <tr>
+        <td>ls -l</td>
+        <td>list files in directory with more info</td>
+    </tr>
+    <tr>
+        <td>touch [filename]</td>
+        <td>create new file</td>
+    </tr>
+    <tr>
+        <td>mkdir [directory]</td>
+        <td>create new directory</td>
+    </tr>
+    <tr>
+        <td>ln -s /path/to/original /path/to/symlink</td>
+        <td>create a symlink</td>
+    </tr>
+    <tr>
+        <td>pwd</td>
+        <td>path of the current directory (present working directory)</td>
+    </tr>
+    <tr>
+        <td>rm [filename]</td>
+        <td>remove file</td>
+    </tr>
+    <tr>
+        <td>cp [file] [new file]</td>
+        <td>copy file</td>
+    </tr>
+    <tr>
+        <td>mv [file] [new filename]</td>
+        <td>move/rename file</td>
+    </tr>
+    <tr>
+        <td>open .</td>
+        <td>open current directory in finder</td>
+    </tr>
+    <tr>
+        <td>open [file]</td>
+        <td>open file in default application</td>
+    </tr>
+    <tr>
+        <td>open -a "Application Name" [filename]</td>
+        <td>open file with specific application</td>
+    </tr>
+    <tr>
+        <td>!!</td>
+        <td>repeats last command Example: <code>sudo !!</code>
+</td>
+    </tr>
+    <tr>
+        <td>xmllint [filename]</td>
+        <td>Syntax check your xsl/xml</td>
+    </tr>
+    <tr>
+        <td>ctrl + c</td>
+        <td>kill whatever you're running</td>
+    </tr>
+    <tr>
+        <td>ctrl + w</td>
+        <td>delete last word</td>
+    </tr>
+    <tr>
+        <td>ctrl + u</td>
+        <td>delete to start of line</td>
+    </tr>
+    <tr>
+        <td>ctrl + a</td>
+        <td>move cursor to start of line</td>
+    </tr>
+    <tr>
+        <td>ctrl + e</td>
+        <td>move cursor to end of line</td>
+    </tr>
+    <tr>
+        <td>cmd + k</td>
+        <td>clear window</td>
+    </tr>
+</table>
+
+<h2>
+<a id="tricks" class="anchor" href="#tricks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tricks</h2>
+
+<p>Drag and drop directory into terminal to get path</p>
+
+<p>The tab key is your friend. When you're entering a directory you can use it to autocomplete what you've already typed in or to show you a list of what's in the directory.</p>
+
+<h2>
+<a id="aliases" class="anchor" href="#aliases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aliases</h2>
+
+<p>An alias is a shortcut for terminal commands</p>
+
+<h3>
+<a id="file-to-add-aliases-to" class="anchor" href="#file-to-add-aliases-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>File to add aliases to:</h3>
+
+<p>~/.bash_profile</p>
+
+<h3>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples:</h3>
+
+<pre><code>alias htdocs="cd /Applications/MAMP/htdocs"
+alias prh="cd /Applications/MAMP/htdocs/princeresortshawaii_com/branches/redesign-2015"
+
+alias edit_hosts='st /etc/hosts'
+alias edit_vhosts='st /Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf'
+alias edit_aliases="st /Users/jkeiser/.oh-my-zsh/custom/my_aliases.zsh"
+
+alias xampp="sudo /Applications/XAMPP/xamppfiles/xampp"</code></pre>
+
+<p>In the example, entering <code>htdocs</code> would be the same as <code>cd /Applications/MAMP/htdocs</code></p>
+
+<h2>
+<a id="svn" class="anchor" href="#svn" aria-hidden="true"><span class="octicon octicon-link"></span></a>SVN</h2>
+
+<p><a href="http://www.linuxfromscratch.org/blfs/edguide/chapter03.html">http://www.linuxfromscratch.org/blfs/edguide/chapter03.html</a></p>
+
+<table>
+    <tr>
+        <td>svn checkout [url]</td>
+        <td>check out a repository</td>
+    </tr>
+    <tr>
+        <td>svn status</td>
+        <td>shows locally modified items</td>
+    </tr>
+    <tr>
+        <td>svn add [filename]</td>
+        <td>when you create a new file or directory, you need to let svn know about it by using the add command</td>
+    </tr>
+    <tr>
+        <td>svn update<br>svn up</td>
+        <td>syncs local with SVN server</td>
+    </tr>
+    <tr>
+        <td>svn commit -m "Commit Message"</td>
+        <td>sends your changed files, added files, and deleted files to the SVN server with a commit message</td>
+    </tr>
+    <tr>
+        <td>svn log</td>
+        <td>display commit log messages</td>
+    </tr>
+    <tr>
+        <td>svn log -r {2015-05-01}:{2015-05-31}</td>
+        <td>display commit log messages between two dates</td>
+    </tr>
+</table>
+
+<h2>
+<a id="git" class="anchor" href="#git" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git</h2>
+
+<p><a href="http://rogerdudler.github.io/git-guide/">http://rogerdudler.github.io/git-guide/</a></p>
+
+<table>
+    <tr>
+        <td>git clone [url]</td>
+        <td>create a working copy of a repository. similar to svn checkout</td>
+    </tr>
+    <tr>
+        <td>git status</td>
+        <td>shows locally modified items</td>
+    </tr>
+    <tr>
+        <td>git add [filename]</td>
+        <td>include files in what will be committed</td>
+    </tr>
+    <tr>
+        <td>git add *</td>
+        <td>add all files to be committed</td>
+    </tr>
+    <tr>
+        <td>git commit -m "Commit Message"</td>
+        <td>record changes to repository. does not commit to remote</td>
+    </tr>
+    <tr>
+        <td>git pull</td>
+        <td>pulls changes from remote repository</td>
+    </tr>
+    <tr>
+        <td>git push</td>
+        <td>pushes changes to remote repository</td>
+    </tr>
+    <tr>
+        <td>git stash save</td>
+        <td>save your local modifications</td>
+    </tr>
+    <tr>
+        <td>git stash apply</td>
+        <td>apply stash modifications on top of the current working tree state</td>
+    </tr>
+    <tr>
+        <td>git checkout -b [branch name]</td>
+        <td>create a new branch and switch to it</td>
+    </tr>
+    <tr>
+        <td>git checkout [branch name]</td>
+        <td>switch to different branch</td>
+    </tr>
+</table>
+
+<h2>
+<a id="vim" class="anchor" href="#vim" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vim</h2>
+
+<p>Vim is a text editor within terminal. You'll sometimes find yourself in vim when using terminal so it's important to know a few things about it.</p>
+
+<p>Vim has four modes: Normal, Insert, Visual, and Command.</p>
+
+<h4>
+<a id="normal" class="anchor" href="#normal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Normal</h4>
+
+<p>Esc key</p>
+
+<p>Vim starts in normal mode. You can navigate the file and start editing.</p>
+
+<h4>
+<a id="insert" class="anchor" href="#insert" aria-hidden="true"><span class="octicon octicon-link"></span></a>Insert</h4>
+
+<p><code>a, A, i, I, o, and O</code></p>
+
+<p>In this mode, you can edit the file like you would in a normal text editor. <strong>To exit Insert mode, hit Esc to return to Normal mode.</strong></p>
+
+<h4>
+<a id="visual" class="anchor" href="#visual" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visual</h4>
+
+<p><code>v, V, and Ctrl-v</code></p>
+
+<p>In Visual mode, you can select text.</p>
+
+<h4>
+<a id="command" class="anchor" href="#command" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command</h4>
+
+<p><code>:</code></p>
+
+<p>Anytime you use the <code>:</code> command in Normal mode, you will enter into Command mode. In Command mode, you can perform complex editing functions, file actions, or shell actions.</p>
+
+<h4>
+<a id="how-to-close-vim" class="anchor" href="#how-to-close-vim" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to close Vim</h4>
+
+<p>Keep calm and use these:</p>
+
+<p>In Normal mode, you can type <code>ZZ</code> to save everything and exit. If you're in Insert mode, remember to hit Esc to return to Normal mode first.</p>
+
+<p>In Command mode, you can use these to save and quit:</p>
+
+<p><code>:w</code> to save<br>
+<code>:wq</code> to save and quit<br>
+<code>:q</code> to quit without saving  </p>
+
+<p>add <code>!</code> at the end to force the operation to write without questions</p>
+
+<p>Example: <code>:wq!</code></p>
+
+<h2>
+<a id="mysql" class="anchor" href="#mysql" aria-hidden="true"><span class="octicon octicon-link"></span></a>MySQL</h2>
+
+<h4>
+<a id="how-to-login-to-mysql" class="anchor" href="#how-to-login-to-mysql" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to login to MySQL</h4>
+
+<p>If you're using XAMPP:<br>
+<code>/Applications/xampp/xamppfiles/bin/mysql -uroot -p</code></p>
+
+<h4>
+<a id="createdelete" class="anchor" href="#createdelete" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create/Delete</h4>
+
+<p><b>Create:</b><br>
+<code>CREATE DATABASE [database name];</code><br>
+<b>Delete:</b><br>
+<code>DROP DATABASE [database name];</code><br></p>
+
+<h4>
+<a id="importexport" class="anchor" href="#importexport" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import/Export</h4>
+
+<p><b>Export:</b><br>
+<b>Import:</b><br>
+<code>USE [database name];</code><br>
+<code>source [path to sql file];</code><br></p>
+
+<h4>
+<a id="how-to-exit" class="anchor" href="#how-to-exit" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to exit</h4>
+
+<p><code>exit;</code></p>
+
+<h2>
+<a id="extra" class="anchor" href="#extra" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extra</h2>
+
+<h3>
+<a id="iterm" class="anchor" href="#iterm" aria-hidden="true"><span class="octicon octicon-link"></span></a>iTerm</h3>
+
+<p><a href="http://iterm2.com/">http://iterm2.com/</a></p>
+
+<p>iTerm is a replacement for Terminal. It has a lot of nice features but the one I use the most is the hotkey window.</p>
+
+<h3>
+<a id="oh-my-zsh" class="anchor" href="#oh-my-zsh" aria-hidden="true"><span class="octicon octicon-link"></span></a>Oh-My-Zsh</h3>
+
+<p><a href="http://ohmyz.sh/">http://ohmyz.sh/</a></p>
+
+<p>I use Oh-My-Zsh for its better tab completion, themes, and plugins.</p>
+
+<p>Features:</p>
+
+<ul>
+<li>
+<code>take [directory name]</code> Same as mkdir [directory name]; cd [directory name];</li>
+<li>Type first part of command and use arrows keys to navigate history</li>
+<li>ctrl + r allows you to search through recent commands</li>
+</ul>
+
+<p>Plugins:</p>
+
+<ul>
+<li>
+<a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins-Overview#fs-jumping">z</a> - Learns what directories you frequently use</li>
+<li>
+<a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#sudo">sudo</a> - Press escape twice to add sudo to beginning of line</li>
+</ul>
+
+<h3>
+<a id="trash" class="anchor" href="#trash" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trash</h3>
+
+<p><a href="https://github.com/sindresorhus/trash">https://github.com/sindresorhus/trash</a>
+Alternative to using <code>rm</code> that moves files to the trash</p>
+
+<h2>
+<a id="resources" class="anchor" href="#resources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h2>
+
+<ul>
+<li><a href="http://commandlinepoweruser.com/">Command Line Power User</a></li>
+<li><a href="http://cli.learncodethehardway.org/">The Command Line Crash Course</a></li>
+</ul>
+
+<h1>
+<a id="windows" class="anchor" href="#windows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Windows</h1>
+
+<h2>
+<a id="basics-1" class="anchor" href="#basics-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basics</h2>
+
+<p>Commands for PowerShell</p>
+
+<table>
+    <tr>
+        <td>cd</td>
+        <td>change directory</td>
+    </tr>
+    <tr>
+        <td>ls</td>
+        <td>list files in directory</td>
+    </tr>
+    <tr>
+        <td>New-Item [filename] -ItemType file</td>
+        <td>create new file</td>
+    </tr>
+    <tr>
+        <td>mkdir</td>
+        <td>create new directory</td>
+    </tr>
+    <tr>
+        <td>pwd</td>
+        <td>path of the current directory</td>
+    </tr>
+    <tr>
+        <td>del [filename]</td>
+        <td>remove file</td>
+    </tr>
+    <tr>
+        <td>cp [file] [new file]</td>
+        <td>copy file</td>
+    </tr>
+    <tr>
+        <td>mv [file] [new filename]</td>
+        <td>move/rename file</td>
+    </tr>
+    <tr>
+        <td>explorer .</td>
+        <td>open current directory in finder</td>
+    </tr>
+</table>
+
+<h2>
+<a id="extra-1" class="anchor" href="#extra-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extra</h2>
+
+<p>Drag and drop into PowerShell to get path.</p>
+
+<p>The tab key is your friend. When you're entering a directory you can use it to autocomplete what you've already typed in or to show you a list of what's in the directory.</p>
+
+<h2>
+<a id="extra-2" class="anchor" href="#extra-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extra</h2>
+
+<h3>
+<a id="cygwin" class="anchor" href="#cygwin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cygwin</h3>
+
+<p><a href="https://cygwin.com/">https://cygwin.com/</a></p>
+
+<p>Cygwin is a Windows program that replaces the standard shell with one that closely resembles a Unix machine. There are a lot of alternatives to cygwin so I suggest finding one that you like.</p>
+
+<h3>
+<a id="gow" class="anchor" href="#gow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gow</h3>
+
+<p><a href="https://github.com/bmatzelle/gow/wiki">https://github.com/bmatzelle/gow/wiki</a></p>
+
+<p>A light weight alternative to Cygwin.</p>
+
+<h3>
+<a id="cmder" class="anchor" href="#cmder" aria-hidden="true"><span class="octicon octicon-link"></span></a>cmder</h3>
+
+<p><a href="http://gooseberrycreative.com/cmder/">http://gooseberrycreative.com/cmder/</a></p>
+
+<p>Console emulator for Windows!</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/MongooseDoom/command-line-cheatsheet">Command Line Cheatsheet</a> is maintained by <a href="https://github.com/MongooseDoom">MongooseDoom</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
